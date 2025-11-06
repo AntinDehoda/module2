@@ -260,6 +260,7 @@ def demo_fruit_recognition():
         "phasoleus_info": {
             "text": "Phaseolus (bean, wild bean) varieties differ greatly in size, shape, colour, and fibrousness or tenderness of the immature pods."
                    "Seed colours range from white through green, yellow, tan, pink, red, brown, and purple to black in solid colours and countless contrasting patterns."
+                   "protein and vitamin-rich"
                    "They are a protein and vitamin-rich meat alternative and can be cooked into soups, chilis, and curries and used in salads and rice-based dishes.",
             "source": "wiki"
         },
@@ -340,8 +341,8 @@ def demo_fruit_recognition():
         "round citrus fruit with vitamin C",
         "healthy fruit for breakfast",
         "fruit with bromeline",
-        "product with protein",
-        "helloween"
+        "protein and vitamin-rich",
+        "formed from many small flowers"
     ]
 
     all_results = {
@@ -379,14 +380,14 @@ def demo_fruit_recognition():
         print("="*70)
 
         # Використовуємо одне зображення для пошуку схожого контексту
-        test_image = images_dir / "banana.jpg"
+        test_image = images_dir / "pumpkin.jpg"
         if test_image.exists():
-            print(f"\nПошук за зображенням: banana.jpg")
+            print(f"\nПошук за зображенням: pumpkin.jpg")
             results = rag.search_by_image(str(test_image), n_results=3)
 
             query_result = {
                 "query_type": "image",
-                "query_image": "banana.jpg",
+                "query_image": "pumpkin.jpg",
                 "results_count": results['count'],
                 "top_results": []
             }
@@ -510,7 +511,7 @@ def run_multimodal_rag_demo():
         fruits_results = demo_fruit_recognition()
 
         # Demo 2: E-Commerce Product Search
-        products_results = demo_product_search()
+        # products_results = demo_product_search()
 
         # Збереження результатів
         all_results = {
@@ -520,7 +521,7 @@ def run_multimodal_rag_demo():
             "vector_db": "ChromaDB",
             "demos": [
                 fruits_results,
-                products_results
+                # products_results
             ]
         }
 
