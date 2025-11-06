@@ -250,7 +250,26 @@ def demo_fruit_recognition():
                    "It's round and has a thick peel. "
                    "Oranges are rich in vitamin C and have juicy, sweet-tart flesh.",
             "source": "fruits_encyclopedia"
-        }
+        },
+        "pineapple_info": {
+            "text": "Pineapple is a tropical plant known for its sweet, edible fruit"
+                   "Pineapple grows from a rosette of stiff, sword-shaped leaves."
+                   "The pineapple fruit is formed from many small flowers that fuse together, resulting in a large, juicy, and aromatic structure, typically with a tough outer skin and a tuft of leaves on top",
+            "source": "fruits_encyclopedia"
+        },
+        "phasoleus_info": {
+            "text": "Phaseolus (bean, wild bean) varieties differ greatly in size, shape, colour, and fibrousness or tenderness of the immature pods."
+                   "Seed colours range from white through green, yellow, tan, pink, red, brown, and purple to black in solid colours and countless contrasting patterns."
+                   "They are a protein and vitamin-rich meat alternative and can be cooked into soups, chilis, and curries and used in salads and rice-based dishes.",
+            "source": "wiki"
+        },
+        "pumpkin_info": {
+            "text": "Pumpkin fruits smooth and slightly ribbed skin and deep yellow to orange color"
+                   "Most parts of the pumpkin plant are edible, including the fleshy shell, the seeds, the leaves, and the flowers."
+                   "When ripe, the pumpkin can be boiled, steamed, or roasted.",
+            "source": "wiki"
+        }, 
+        
     }
 
     for doc_id, info in fruits_info.items():
@@ -278,7 +297,23 @@ def demo_fruit_recognition():
         "orange_img": {
             "path": images_dir / "orange.jpg",
             "caption": "An orange citrus fruit"
-        }
+        },
+        "orange_img": {
+            "path": images_dir / "orange.jpg",
+            "caption": "An orange citrus fruit"
+        },
+        "pineapple_img": {
+            "path": images_dir / "pineapple.jpg",
+            "caption": "fruit that contains bromeline"
+        },
+        "pumpkin_img": {
+            "path": images_dir / "pumpkin.jpg",
+            "caption": "the helloween vegetable"
+        },
+        "phasoleus_img": {
+            "path": images_dir / "phasoleus.jpg",
+            "caption": "protein and vitamin-rich meat alternative bean"
+        },
     }
 
     images_added = 0
@@ -303,7 +338,10 @@ def demo_fruit_recognition():
     test_queries = [
         "yellow tropical fruit rich in potassium",
         "round citrus fruit with vitamin C",
-        "healthy fruit for breakfast"
+        "healthy fruit for breakfast",
+        "fruit with bromeline",
+        "product with protein",
+        "helloween"
     ]
 
     all_results = {
